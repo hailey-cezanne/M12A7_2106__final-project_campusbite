@@ -1,6 +1,4 @@
 # AI usage — CampusBites
-Structured with the Hall of Games reference: https://github.com/marcustayao23/HALL-OF-GAMES/blob/main/AI-USAGE.md
-Its requirements belong to that reference project; the CampusBites course rubric was not available locally.
 
 ## 1. How we used AI
 ### 2026-09-24 — Initial foundation (existing record)
