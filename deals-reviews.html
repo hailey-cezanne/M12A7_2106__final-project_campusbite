@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="CampusBites is a student project exploring a food guide for Holy Angel University. Week 1 uses sample content.">
+  <meta name="description" content="CampusBites is a student project exploring a food guide for Holy Angel University. Browse food categories, compare sample budgets, and share local recommendations.">
   <title>Deals & Reviews | CampusBites</title>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header container">
-    <a class="brand" href="index.html">Campus<span>Bites</span></a>
+    <a class="brand" href="index.html"><img class="brand-logo" src="assets/campusbites-logo.png" alt="">Campus<span>Bites</span></a>
     <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="food-spots.html">Food Spots</a>
@@ -18,29 +19,42 @@
       <a href="contact.html">Contact</a>
     </nav>
   </header>
-  <main>
+  <main id="main-content">
     <section class="section container">
       <p class="eyebrow">Campus conversations</p>
       <h1>Deals &amp; Reviews</h1>
       <p>A place for budget finds and student recommendations.</p>
-      <p class="notice">Week 1 layout samples only. These are fictional examples, not real student reviews or available offers.</p>
+      <p class="notice">Illustrative content only. These are fictional examples, not real student reviews or available offers.</p>
       <div class="three-column">
         <article class="simple-card"><span class="sample-label">Sample deal · Not available</span><h2>Meal + drink idea</h2><p>A future deal card could show a verified meal bundle, its price and the dates it is available.</p><p>Vendor, price and validity: To be updated.</p></article>
         <article class="simple-card"><span class="sample-label">Sample review · Fictional</span><h2>A quick lunch break</h2><p>Example review text: “A convenient pick when you have a short break between classes.”</p><p>Actual student review and stall: To be collected.</p></article>
         <article class="simple-card"><span class="sample-label">Sample review · Fictional</span><h2>Something sweet</h2><p>Example review text: “A small treat to share with friends after class.”</p><p>Actual student review and stall: To be collected.</p></article>
       </div>
-      <p class="future-note">Next steps: collect genuine recommendations and confirm deals with vendors. Review submission is not part of this prototype.</p>
+      <section class="simple-card" aria-labelledby="review-title">
+<h2 id="review-title">Your own tasting notes</h2>
+<p>Save a personal review in this browser. Notes are not published or sent to the team. Avoid personal information.</p>
+<form id="review-form">
+<label for="review-spot">Sample spot</label><select id="review-spot"><option>Sample Meal Stall</option><option>Sample Snack Corner</option><option>Sample Drink Stop</option><option>Sample Sweet Spot</option></select>
+<label for="review-rating">Rating</label><select id="review-rating"><option value="5">5 — Loved it</option><option value="4">4 — Good</option><option value="3">3 — Okay</option><option value="2">2 — Could improve</option><option value="1">1 — Not for me</option></select>
+<label for="review-text">Your note</label><textarea id="review-text" required minlength="10" maxlength="500" rows="3"></textarea>
+<button class="button" type="submit">Save personal note</button>
+<p id="review-status" role="status"></p>
+</form>
+<div id="personal-reviews"></div>
+<button id="clear-reviews" class="button button-yellow" type="button" hidden>Clear my notes</button>
+<noscript>Personal notes require JavaScript.</noscript>
+</section>
     </section>
   </main>
   <footer class="site-footer">
     <div class="container">
-      <a class="brand" href="index.html">Campus<span>Bites</span></a>
+      <a class="brand" href="index.html"><img class="brand-logo" src="assets/campusbites-logo.png" alt="">Campus<span>Bites</span></a>
       <p>A student-made cafeteria guide for the HAU community.</p>
       <nav aria-label="Footer navigation"><a href="index.html">Home</a>
         <a href="food-spots.html">Food Spots</a>
         <a href="deals-reviews.html">Deals & Reviews</a>
         <a href="contact.html">Contact</a></nav>
-      <small>&copy; 2026 CampusBites · Intro to Web final project · Week 1 prototype.<br>Independent student project. Sample information is not verified HAU information.</small>
+      <small>&copy; 2026 CampusBites · Intro to Web final project · Cafeteria guide.<br>Independent student project. Sample information is not verified HAU information.</small>
     </div>
   </footer>
 </body>

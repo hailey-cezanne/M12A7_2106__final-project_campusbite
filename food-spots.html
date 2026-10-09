@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="CampusBites is a student project exploring a food guide for Holy Angel University. Week 1 uses sample content.">
+  <meta name="description" content="CampusBites is a student project exploring a food guide for Holy Angel University. Browse food categories, compare sample budgets, and share local recommendations.">
   <title>Food Spots | CampusBites</title>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header container">
-    <a class="brand" href="index.html">Campus<span>Bites</span></a>
+    <a class="brand" href="index.html"><img class="brand-logo" src="assets/campusbites-logo.png" alt="">Campus<span>Bites</span></a>
     <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="food-spots.html" aria-current="page">Food Spots</a>
@@ -18,7 +19,7 @@
       <a href="contact.html">Contact</a>
     </nav>
   </header>
-  <main>
+  <main id="main-content">
     <section class="section container">
       <p class="eyebrow">Find a place for your next break</p>
       <h1>Food Spots</h1>
@@ -27,7 +28,7 @@
       <div class="search-controls">
         <label for="food-search">Search sample food spots</label>
         <input type="search" id="food-search" placeholder="Try meals or snack" autocomplete="off">
-        <div class="filters" role="group" aria-label="Filter by category">
+        <div class="budget-controls"><label for="max-budget">Maximum starting price (sample)</label><select id="max-budget"><option value="all">Any budget</option><option value="30">₱30 or less</option><option value="50">₱50 or less</option></select><label for="food-sort">Sort listings</label><select id="food-sort"><option value="default">Default order</option><option value="price">Starting price: low to high</option><option value="name">Name: A–Z</option></select><button type="button" class="button" id="reset-filters">Reset filters</button></div><div class="filters" role="group" aria-label="Filter by category">
           <button type="button" data-filter="all" aria-pressed="true">All</button>
           <button type="button" data-filter="meals" aria-pressed="false">Meals</button>
           <button type="button" data-filter="snacks" aria-pressed="false">Snacks</button>
@@ -39,8 +40,8 @@
       <p id="result-count" role="status">4 sample spots shown.</p>
       <div class="food-grid" id="food-list">
       <!-- SAMPLE: replace this listing with verified stall information. -->
-      <article class="food-card" id="spot-1" data-category="meals">
-        <div class="food-image placeholder"><span>Meals</span><small>Food photo placeholder</small></div>
+      <article class="food-card" id="spot-1" data-price="50" data-order="1" data-category="meals">
+        <div class="food-image placeholder"><span aria-hidden="true" class="food-symbol">🍚</span><small>Meals · sample listing</small></div>
         <div class="card-body">
           <span class="sample-label">Sample listing</span>
           <h3>Sample Meal Stall</h3>
@@ -51,8 +52,8 @@
         </div>
       </article>
       <!-- SAMPLE: replace this listing with verified stall information. -->
-      <article class="food-card" id="spot-2" data-category="snacks">
-        <div class="food-image placeholder"><span>Snacks</span><small>Food photo placeholder</small></div>
+      <article class="food-card" id="spot-2" data-price="25" data-order="2" data-category="snacks">
+        <div class="food-image placeholder"><span aria-hidden="true" class="food-symbol">🥪</span><small>Snacks · sample listing</small></div>
         <div class="card-body">
           <span class="sample-label">Sample listing</span>
           <h3>Sample Snack Corner</h3>
@@ -63,8 +64,8 @@
         </div>
       </article>
       <!-- SAMPLE: replace this listing with verified stall information. -->
-      <article class="food-card" id="spot-3" data-category="drinks">
-        <div class="food-image placeholder"><span>Drinks</span><small>Food photo placeholder</small></div>
+      <article class="food-card" id="spot-3" data-price="30" data-order="3" data-category="drinks">
+        <div class="food-image placeholder"><span aria-hidden="true" class="food-symbol">🥤</span><small>Drinks · sample listing</small></div>
         <div class="card-body">
           <span class="sample-label">Sample listing</span>
           <h3>Sample Drink Stop</h3>
@@ -75,8 +76,8 @@
         </div>
       </article>
       <!-- SAMPLE: replace this listing with verified stall information. -->
-      <article class="food-card" id="spot-4" data-category="desserts">
-        <div class="food-image placeholder"><span>Desserts</span><small>Food photo placeholder</small></div>
+      <article class="food-card" id="spot-4" data-price="35" data-order="4" data-category="desserts">
+        <div class="food-image placeholder"><span aria-hidden="true" class="food-symbol">🍦</span><small>Desserts · sample listing</small></div>
         <div class="card-body">
           <span class="sample-label">Sample listing</span>
           <h3>Sample Sweet Spot</h3>
@@ -92,13 +93,13 @@
   </main>
   <footer class="site-footer">
     <div class="container">
-      <a class="brand" href="index.html">Campus<span>Bites</span></a>
+      <a class="brand" href="index.html"><img class="brand-logo" src="assets/campusbites-logo.png" alt="">Campus<span>Bites</span></a>
       <p>A student-made cafeteria guide for the HAU community.</p>
       <nav aria-label="Footer navigation"><a href="index.html">Home</a>
         <a href="food-spots.html">Food Spots</a>
         <a href="deals-reviews.html">Deals & Reviews</a>
         <a href="contact.html">Contact</a></nav>
-      <small>&copy; 2026 CampusBites · Intro to Web final project · Week 1 prototype.<br>Independent student project. Sample information is not verified HAU information.</small>
+      <small>&copy; 2026 CampusBites · Intro to Web final project · Cafeteria guide.<br>Independent student project. Sample information is not verified HAU information.</small>
     </div>
   </footer>
 </body>

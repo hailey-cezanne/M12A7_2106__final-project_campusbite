@@ -1,27 +1,41 @@
-# CampusBites — Week 1
+# CampusBites
+**A Web-Based Cafeteria Guide for Holy Angel University**
 
-A beginner HTML, CSS and vanilla JavaScript cafeteria-guide foundation for the Holy Angel University community. This is an independent student project and only the first of three increments.
+CampusBites helps students explore food categories and compare budgets through an independent student-made guide. Built with HTML, CSS, and vanilla JavaScript. Branding uses the supplied Campus Bites “Eat Easy.” logo, red, yellow, and cream.
 
-## Open locally
+## Run locally
+Open index.html in a modern browser, or use VS Code Live Server from this repository folder. No build, framework, backend, or package installation is required.
 
-Open index.html in a browser, or right-click index.html in VS Code and choose Open with Live Server if that extension is installed. No build command or package installation is needed.
+## Features
+- Four connected pages with shared navigation, current-page indicators, keyboard focus, and a skip link.
+- Home category links open a filtered Food Spots page; detail links open the selected listing.
+- Case-insensitive search across listing text, combined category and maximum starting-price filters, sorting, result counts, empty state, and reset.
+- Native expandable listing details; listings remain readable without JavaScript.
+- Personal tasting notes with ratings, safe text rendering, up to 20 recent entries, browser storage, and clear control. Storage failures fall back to the current visit.
+- Required suggestion fields, validation, and a downloadable text file. Suggestions are not delivered to the team.
+- Responsive grids and navigation for desktop, tablet, and phones.
 
-## Files
+## File organization
+- index.html — home, categories, sample food cards, and guide introduction.
+- food-spots.html — searchable sample directory.
+- deals-reviews.html — fictional deal/review examples and personal notes.
+- contact.html — actual team responsibilities and local suggestion form.
+- styles.css / script.js — shared presentation and understandable page-guarded behavior.
+- assets/campusbites-logo.png — supplied logo, copied inside the repository for portable paths.
+- project/DIVISION.md — user-confirmed Week 1 responsibilities.
+- project/verify.cjs — browser verification script.
+- project/home-desktop.png / home-mobile.png — verification screenshots.
+- AI-USAGE.md — AI assistance, limitations, attribution, and evidence status.
 
-- index.html: Home, categories, four sample cards, benefits and preview.
-- food-spots.html: sample listings with search, category filters and native HTML details.
-- deals-reviews.html: three clearly fictional deal/review layout samples.
-- contact.html: placeholder contact information and a demo form.
-- styles.css: shared colors, layout, cards and two basic responsive breakpoints.
-- script.js: simple filtering and a demo form notice.
+## Content and scope
+All four stalls, price ranges, and deal/review examples are explicitly illustrative. No verified stall names, locations, menu, opening hours, photos, public team email, or vendor contacts were supplied. Replace these with researched information before presenting the site as a live cafeteria directory. Food icons are category illustrations, not stall photographs. Starting-price filters do not guarantee every menu item fits the selected budget.
 
+This is a guide, not an ordering service. Personal notes remain in the browser and may be lost when browser data is cleared. Contact downloads must be shared manually. No accounts, payments, server delivery, or database are implemented.
 
-## Replace placeholders
+## Team and course evidence
+All four members contributed to Week 1 coding and development. See project/DIVISION.md for the supplied responsibilities. No individual line ownership or new Git history is inferred. No course rubric or increment report was present in the inspected repository; rubric compliance requires the actual rubric and member evidence.
 
-All stalls, prices, locations, contacts and reviews are unverified samples. Collect accurate information before publishing any real claims. Home and Food Spots use separate HTML cards; update both when replacing a listing.
+## Verification
+Run node --check script.js. The browser check in project/verify.cjs uses the desktop environment's bundled Playwright path; adjust that require path if running elsewhere. Run node project/verify.cjs. It checks local links/assets, all pages at 1440/768/375 pixels, JavaScript errors, directory controls, deep links, note persistence and safe rendering, and suggestion validation/download.
 
-No external images are downloaded. Replace a food-image placeholder div with an img element using class="food-image", an appropriate local src and a meaningful alt. Create an images folder when adding photos you own or have permission to use. The shared CSS supplies object-fit: cover. Replace the hero placeholder similarly and adjust its height as needed.
-
-## Current limits
-
-This is just a guide, not an ordering service. There are no accounts, payments, databases or backend. The form never delivers messages; with JavaScript enabled it displays a demo notice, and without JavaScript a submit only reloads the page (fields have no name attributes, so their values are not submitted). Search needs JavaScript. Native details work without it.
+Finalization is prepared for publication to https://github.com/hailey-cezanne/M12A7_2106__final-project_campusbite under the commit message “Complete CampusBites final project”. See Git history for publication evidence.

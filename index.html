@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="CampusBites is a student project exploring a food guide for Holy Angel University. Week 1 uses sample content.">
+  <meta name="description" content="CampusBites is a student project exploring a food guide for Holy Angel University. Browse food categories, compare sample budgets, and share local recommendations.">
   <title>Home | CampusBites</title>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header container">
-    <a class="brand" href="index.html">Campus<span>Bites</span></a>
+    <a class="brand" href="index.html"><img class="brand-logo" src="assets/campusbites-logo.png" alt="">Campus<span>Bites</span></a>
     <nav aria-label="Main navigation">
       <a href="index.html" aria-current="page">Home</a>
       <a href="food-spots.html">Food Spots</a>
@@ -18,36 +19,36 @@
       <a href="contact.html">Contact</a>
     </nav>
   </header>
-  <main>
+  <main id="main-content">
     <section class="hero container">
       <div>
         <p class="eyebrow">Welcome to CampusBites</p>
         <h1>FIND YOUR NEXT<br>CAMPUS BITE.</h1>
         <p class="hero-description">Affordable food around HAU,<br>all in one place.</p>
         <a class="button button-yellow" href="food-spots.html">Explore food spots</a>
-        <p class="hero-note">Week 1 preview · Sample listings for now</p>
+        <p class="hero-note">EAT EASY. · A guide made for the HAU community</p>
       </div>
-      <div class="hero-image placeholder"><span>Your next campus bite</span><p>Food photo goes here</p><small>Replace with your own food or stall photo.</small></div>
+      <div class="hero-art"><img src="assets/campusbites-logo.png" alt="Campus Bites — Eat Easy, with a chef hat on a red and yellow seal"><p>YOUR BREAK. YOUR BUDGET. YOUR BITE.</p></div>
     </section>
 
     <section class="section container" aria-labelledby="cravings-title">
       <h2 id="cravings-title">What are you craving?</h2>
       <p>A little something for every kind of break.</p>
       <div class="category-grid">
-        <div class="category-card"><span aria-hidden="true">🍚</span><h3>Meals</h3></div>
-        <div class="category-card"><span aria-hidden="true">🥪</span><h3>Snacks</h3></div>
-        <div class="category-card"><span aria-hidden="true">🥤</span><h3>Drinks</h3></div>
-        <div class="category-card"><span aria-hidden="true">🍦</span><h3>Desserts</h3></div>
+        <a class="category-card" href="food-spots.html?category=meals"><span aria-hidden="true">🍚</span><h3>Meals</h3><small>Explore meals →</small></a>
+        <a class="category-card" href="food-spots.html?category=snacks"><span aria-hidden="true">🥪</span><h3>Snacks</h3><small>Explore snacks →</small></a>
+        <a class="category-card" href="food-spots.html?category=drinks"><span aria-hidden="true">🥤</span><h3>Drinks</h3><small>Explore drinks →</small></a>
+        <a class="category-card" href="food-spots.html?category=desserts"><span aria-hidden="true">🍦</span><h3>Desserts</h3><small>Explore desserts →</small></a>
       </div>
     </section>
 
     <section class="section container" aria-labelledby="popular-title">
-      <h2 id="popular-title">Popular around campus</h2>
+      <h2 id="popular-title">Explore the menu possibilities</h2>
       <p class="notice">Preview only: these four sample listings demonstrate the layout. Popularity, stalls and prices have not been verified.</p>
       <div class="food-grid">
       <!-- SAMPLE: replace this listing with verified stall information. -->
       <article class="food-card">
-        <div class="food-image placeholder"><span>Meals</span><small>Food photo placeholder</small></div>
+        <div class="food-image placeholder"><span aria-hidden="true" class="food-symbol">🍚</span><small>Meals · sample listing</small></div>
         <div class="card-body">
           <span class="sample-label">Sample listing</span>
           <h3>Sample Meal Stall</h3>
@@ -59,7 +60,7 @@
       </article>
       <!-- SAMPLE: replace this listing with verified stall information. -->
       <article class="food-card">
-        <div class="food-image placeholder"><span>Snacks</span><small>Food photo placeholder</small></div>
+        <div class="food-image placeholder"><span aria-hidden="true" class="food-symbol">🥪</span><small>Snacks · sample listing</small></div>
         <div class="card-body">
           <span class="sample-label">Sample listing</span>
           <h3>Sample Snack Corner</h3>
@@ -71,7 +72,7 @@
       </article>
       <!-- SAMPLE: replace this listing with verified stall information. -->
       <article class="food-card">
-        <div class="food-image placeholder"><span>Drinks</span><small>Food photo placeholder</small></div>
+        <div class="food-image placeholder"><span aria-hidden="true" class="food-symbol">🥤</span><small>Drinks · sample listing</small></div>
         <div class="card-body">
           <span class="sample-label">Sample listing</span>
           <h3>Sample Drink Stop</h3>
@@ -83,7 +84,7 @@
       </article>
       <!-- SAMPLE: replace this listing with verified stall information. -->
       <article class="food-card">
-        <div class="food-image placeholder"><span>Desserts</span><small>Food photo placeholder</small></div>
+        <div class="food-image placeholder"><span aria-hidden="true" class="food-symbol">🍦</span><small>Desserts · sample listing</small></div>
         <div class="card-body">
           <span class="sample-label">Sample listing</span>
           <h3>Sample Sweet Spot</h3>
@@ -120,13 +121,13 @@
   </main>
   <footer class="site-footer">
     <div class="container">
-      <a class="brand" href="index.html">Campus<span>Bites</span></a>
+      <a class="brand" href="index.html"><img class="brand-logo" src="assets/campusbites-logo.png" alt="">Campus<span>Bites</span></a>
       <p>A student-made cafeteria guide for the HAU community.</p>
       <nav aria-label="Footer navigation"><a href="index.html">Home</a>
         <a href="food-spots.html">Food Spots</a>
         <a href="deals-reviews.html">Deals & Reviews</a>
         <a href="contact.html">Contact</a></nav>
-      <small>&copy; 2026 CampusBites · Intro to Web final project · Week 1 prototype.<br>Independent student project. Sample information is not verified HAU information.</small>
+      <small>&copy; 2026 CampusBites · Intro to Web final project · Cafeteria guide.<br>Independent student project. Sample information is not verified HAU information.</small>
     </div>
   </footer>
 </body>
