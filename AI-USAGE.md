@@ -25,7 +25,7 @@ Only two documented AI-use occasions are supported by available evidence. The re
 ## 3. Who wrote what
 All four members contributed to Week 1 website coding and development. The following responsibilities were supplied by the user.
 
-### Haley Artienda
+### Hailey Artienda
 Lead website development, coding, layout, and design.
 ### Adrielle De Jesus
 Assisted with coding and increment report preparation.
